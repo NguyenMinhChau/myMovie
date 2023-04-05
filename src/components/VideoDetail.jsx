@@ -20,10 +20,10 @@ function VideoDetail() {
         });
     }, [id]);
     if (!videoDetail?.snippet) return 'Loading...';
-    console.log(videoDetail);
+    // console.log(videoDetail);
 
     const {
-        snippet: { title, channelId, channelTitle },
+        snippet: { title, channelId, channelTitle, description },
         statistics: { viewCount, likeCount, favoriteCount },
     } = videoDetail;
     return (
@@ -51,6 +51,9 @@ function VideoDetail() {
                         <div>{parseInt(likeCount || favoriteCount).toLocaleString()} likes</div>
                     </div>
                 </div>
+                {description && (
+                    <div className='videoDetail_preview_description'>{description}</div>
+                )}
             </div>
             <div className='videoDetail_videos_container'>
                 <Videos videos={videos} cols={1} />

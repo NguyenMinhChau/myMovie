@@ -1,6 +1,8 @@
 .feed_container {
     display: flex;
     margin-top: 74px;
+    max-height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
 }
 
 .feed_sidebar_container {
