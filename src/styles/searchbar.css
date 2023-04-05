@@ -1,0 +1,5 @@
+.searchbar_input {
+    border: none;
+    outline: none;
+    caret-color: var(--primary-color);
+}

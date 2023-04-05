@@ -1,0 +1,27 @@
+.videos_container {
+    --cols: 3;
+    --spacing: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.video_item {
+    width: calc((100% / var(--cols)) - (var(--spacing) * 2));
+    margin: var(--spacing);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #24292e;
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .videos_container {
+        --cols: 2;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 46.25em) {
+    .videos_container {
+        --cols: 1;
+    }
+}

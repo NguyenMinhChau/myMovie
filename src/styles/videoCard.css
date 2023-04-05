@@ -1,0 +1,33 @@
+.videoCard_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.videoCard_image {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.videoCard_image:hover {
+    transform: scale(1.1);
+}
+.videoCard_info_video {
+    background-color: #24292e;
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoCard_info_video_title {
+    font-weight: bold;
+    color: var(--white-color);
+    line-height: 1.7;
+    font-size: 17px;
+}
+.videoCard_info_video_sub {
+    color: gray;
+    margin-top: 10px;
+}

@@ -1,0 +1,8 @@
+.channelDetail_container {
+    margin-top: 74px;
+}
+
+.channelDetail_poster {
+    z-index: 10;
+    height: 300px;
+}
