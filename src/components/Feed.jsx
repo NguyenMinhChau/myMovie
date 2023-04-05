@@ -11,6 +11,9 @@ function Feed() {
             setVideos(data.items);
         });
     }, [selectedCategory]);
+    useEffect(() => {
+        document.title = 'My Movie • Nguyễn Minh Châu';
+    }, []);
     return (
         <div className='feed_container'>
             <div className='feed_sidebar_container'>
@@ -21,7 +24,11 @@ function Feed() {
             </div>
             <div className='feed_video_container'>
                 <div className='feed_video_desc'>{selectedCategory}</div>
-                <Videos videos={videos} />
+                {videos?.length > 0 ? (
+                    <Videos videos={videos} />
+                ) : (
+                    <div className='feed_video_desc_loading'>Đang tải dữ liệu...</div>
+                )}
             </div>
         </div>
     );

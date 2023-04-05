@@ -12,6 +12,7 @@ import './styles/videoCard.css';
 import './styles/videoDetail.css';
 import './styles/channelDetail.css';
 import './styles/channelCard.css';
+import './styles/searchFeed.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

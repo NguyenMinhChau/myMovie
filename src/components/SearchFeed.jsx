@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import Videos from './Videos';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
@@ -12,13 +11,21 @@ function SearchFeed() {
             setVideos(data.items);
         });
     }, [searchTerm]);
+    useEffect(() => {
+        document.title = 'Search result • Nguyễn Minh Châu';
+    }, []);
     return (
-        <Box paddingLeft={2} mb={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
-            <Typography variant='h4' fontWeight='bold' mb={2} mt={2} sx={{ color: 'white' }}>
-                Search result for <span style={{ color: '#F31503' }}>{searchTerm}</span> videos
-            </Typography>
-            <Videos videos={videos} />
-        </Box>
+        <div className='searchFeed_container'>
+            <div className='searchFeed_result_text'>
+                Kết quả cho tìm kiếm{' '}
+                <span style={{ color: 'var(--primary-color)' }}>{searchTerm}</span>
+            </div>
+            {videos?.length > 0 ? (
+                <Videos videos={videos} />
+            ) : (
+                <div className='searchFeed_loading'>Đang tải dữ liệu...</div>
+            )}
+        </div>
     );
 }
 

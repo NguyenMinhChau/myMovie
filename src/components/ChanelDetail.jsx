@@ -16,6 +16,9 @@ function ChanelDetail() {
             setVideos(data.items);
         });
     }, [id]);
+    useEffect(() => {
+        document.title = 'Channel Detail • Nguyễn Minh Châu';
+    }, []);
 
     return (
         <div className='channelDetail_container'>
@@ -27,7 +30,11 @@ function ChanelDetail() {
                 <ChannelCard channelVideo={channelDetail} />
             </div>
             <div>
-                <Videos videos={videos} />
+                {videos?.length > 0 ? (
+                    <Videos videos={videos} />
+                ) : (
+                    <div className='channelDetail_loading'>Đang tải dữ liệu...</div>
+                )}
             </div>
         </div>
     );

@@ -6,3 +6,12 @@
     z-index: 10;
     height: 300px;
 }
+.channelDetail_loading {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white-color);
+    margin: 12px 0;
+    letter-spacing: 1px;
+    text-align: center;
+}

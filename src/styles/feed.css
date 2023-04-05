@@ -37,6 +37,16 @@
     letter-spacing: 1px;
 }
 
+.feed_video_desc_loading {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white-color);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
 /* MOBILE */
 @media (max-width: 46.25em) {
     .feed_container {

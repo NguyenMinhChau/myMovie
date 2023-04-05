@@ -1,6 +1,8 @@
 .videoDetail_container {
     display: flex;
     margin-top: 74px;
+    min-height: calc(100vh - var(--header-height));
+    background-color: var(--black-color);
 }
 
 .videoDetail_preview_container {
@@ -76,6 +78,16 @@
     padding: 12px;
     border-radius: 10px;
     word-break: break-all;
+}
+.videoDetail_loading,
+.videoDetail_videos_loading {
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white-color);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 /* TABLET */
